@@ -3,12 +3,12 @@ import csv
 import os
 
 # create a path to the input csv file and output file
-# use os.path.join() to create a path as well
+# use os.path.join() to create the path as well
 
 inputFile = os.path.join("Resources","budget_data.csv")
 outputFile = os.path.join("analysis", "pyBank_analysis.txt")
 
-# initialising variables
+# initialising the variables
 no_of_months = 0
 total_profit_loss = 0
 netChange = 0
@@ -20,20 +20,17 @@ with open(inputFile, 'r') as file:
     # use csvReader function to open the file
     csvReader = csv.reader(file, delimiter=",")
 
-    # to print out the contents of the stream
-    print(csvReader)
+    #Read the header row
     header = next(csvReader)
-    #print(f"Header: {header}") # each row creates a list
-    # read the remaining rows in the CSV file
-   
-    # setting previous profit loss to 0
-    #previous_ProfitLoss = 0
     
+    # read the remaining rows in the CSV file
+       
     for row in csvReader:
         
-        # to print the names, access index 0
+        # increment the count of total months
         no_of_months += 1
 
+        # accumulating profit/loss in index 1
         total_profit_loss = total_profit_loss + int(row[1])
 
         if no_of_months == 1: # make the previous month profit loss as current month profit loss
@@ -45,7 +42,7 @@ with open(inputFile, 'r') as file:
         # add net change to the Monthly changes list
         monthlyChanges.append(netChange)
 
-        # add firdt month that a change happened
+        # add first month that a change happened
         months.append(row[0])
 
         # setting previous profit loss with the current row's profit loss
@@ -66,23 +63,22 @@ with open(inputFile, 'r') as file:
             greatestDecrease[0] = months[m]
 
     #Output to terminal   
-    print("Financial Analysis")
-    print("---------------------------") 
-    print("Total Months: " , no_of_months)
-    print(f"Total: ${total_profit_loss}")
-    #print(monthlyChanges)
-    print(f"Average Change: ${averageMonthlyChanges:.2f}")
-    print(f"Greatest Increase in Profits: {greatestIncrease[0]} (${greatestIncrease[1]})")
-    print(f"Greatest Decrease in Profits: {greatestDecrease[0]} (${greatestDecrease[1]})")
+    print(f"\nFinancial Analysis\n")
+    print(f"---------------------------\n") 
+    print(f"Total Months: {no_of_months}\n")
+    print(f"Total: ${total_profit_loss}\n")
+    print(f"Average Change: ${averageMonthlyChanges:.2f}\n")
+    print(f"Greatest Increase in Profits: {greatestIncrease[0]} (${greatestIncrease[1]})\n")
+    print(f"Greatest Decrease in Profits: {greatestDecrease[0]} (${greatestDecrease[1]})\n")
 
     # open the file path using write mode
 with open(outputFile, 'w') as file:
     
     # use writeRow function to write data to the file
-    file.write(f"Financial Analysis\n")
-    file.write(f"---------------------------\n")
-    file.write(f"Total Months:  {no_of_months}\n")
-    file.write(f"Total:  ${total_profit_loss}\n")
-    file.write(f"Average Change: ${averageMonthlyChanges:.2f}\n")
-    file.write(f"Greatest Increase in Profits: {greatestIncrease[0]} (${greatestIncrease[1]})\n")
-    file.write(f"Greatest Decrease in Profits: {greatestDecrease[0]} (${greatestDecrease[1]})\n")
+    file.write(f"Financial Analysis\n\n")
+    file.write(f"---------------------------\n\n")
+    file.write(f"Total Months: {no_of_months}\n\n")
+    file.write(f"Total: ${total_profit_loss}\n\n")
+    file.write(f"Average Change: ${averageMonthlyChanges:.2f}\n\n")
+    file.write(f"Greatest Increase in Profits: {greatestIncrease[0]} (${greatestIncrease[1]})\n\n")
+    file.write(f"Greatest Decrease in Profits: {greatestDecrease[0]} (${greatestDecrease[1]})\n\n")
