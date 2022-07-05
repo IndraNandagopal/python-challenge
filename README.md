@@ -1,7 +1,7 @@
 # python-challenge
 
 ## Background
-This assignment is to analyze the financial(PyBank) and election(PyPoll) data using Python. 
+This assignment is to analyze the financial (`PyBank`) and election (`PyPoll`) data using Python. 
 
 ### Initial Tasks performed
 
@@ -33,58 +33,60 @@ In this Challenge, the task is to create a Python script to analyze the financia
 
 The Python script analyzed the records to calculate each of the following values:
 
-    The total number of months included in the dataset
-
-    The net total amount of "Profit/Losses" over the entire period
-
-    The changes in "Profit/Losses" over the entire period, and then the average of those changes
-
-    The greatest increase in profits (date and amount) over the entire period
-
-    The greatest decrease in profits (date and amount) over the entire period
+- Total number of months included in the dataset
+- Net total amount of "Profit/Losses" over the entire period
+- Changes in "Profit/Losses" over the entire period, and then the average of those changes
+- Greatest increase in profits (date and amount) over the entire period
+- Greatest decrease in profits (date and amount) over the entire period
 
 ### PyBank Output:
 
-Financial Analysis
+    Financial Analysis
 
----------------------------
+    ---------------------------
 
-Total Months: 86
+    Total Months: 86
 
-Total: $22564198
+    Total: $22564198
 
-Average Change: $-8311.11
+    Average Change: $-8311.11
 
-Greatest Increase in Profits: Aug-16 ($1862002)
+    Greatest Increase in Profits: Aug-16 ($1862002)
 
-Greatest Decrease in Profits: Feb-14 ($-1825558)
+    Greatest Decrease in Profits: Feb-14 ($-1825558)
 
-* The final script, printed the analysis to the terminal and exported a text file with the results.
+- The final script prints the analysis to the terminal and exports the results to [pyBank_analysis.txt](PyBank/analysis/pyBank_analysis.txt)
 
 ### Python Challenge 2 - PyPoll
+
 In this Challenge, the task is to create a Python script to analyze the poll data from a dataset called election_data.csv. The dataset is composed of three columns: "Voter ID", "County", and "Candidate". The Python script analyzed the votes and calculated each of the following values:
 
-    The total number of votes cast
-
-    A complete list of candidates who received votes
-
-    The percentage of votes each candidate won
-
-    The total number of votes each candidate won
-
-    The winner of the election based on popular vote
+- The total number of votes cast
+- A complete list of candidates who received votes
+- The percentage of votes each candidate won
+- The total number of votes each candidate won
+- The winner of the election based on popular vote
 
 ### PyPoll Output:
 
-Election Results
--------------------------
-Total Votes: 369711
--------------------------
-Charles Casper Stockham: 23.049% (85213)
-Diana DeGette: 73.812% (272892)
-Raymon Anthony Doane: 3.139% (11606)
--------------------------
-Winner: Diana DeGette
--------------------------
+    Election Results
 
-* The final script, printed the analysis to the terminal and exported a text file with the results.
+    -------------------------
+
+    Total Votes: 369711
+
+    -------------------------
+
+    Charles Casper Stockham: 23.049% (85213)
+
+    Diana DeGette: 73.812% (272892)
+    
+    Raymon Anthony Doane: 3.139% (11606)
+    
+    -------------------------
+    
+    Winner: Diana DeGette
+    
+    -------------------------
+
+- The final script prints the analysis to the terminal and exports the results to [pyPoll_analysis.txt](PyPoll/analysis/pyPoll_analysis.txt)
