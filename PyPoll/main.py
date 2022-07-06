@@ -43,7 +43,7 @@ with open(inputFile, 'r') as file:
         # get the votes count and the % of votes
         votes = candidateVotes.get(candidate)
         votePercent = (float(votes) / float(totalVotes)) * 100
-        voteOutput += f"{candidate}: {votePercent:.3f}% ({votes})\n\n"
+        voteOutput += f"{candidate}: {votePercent:.3f}% ({votes})\n"
         
         #compare the votes to the winning count
         if votes > winningCount:
@@ -52,17 +52,17 @@ with open(inputFile, 'r') as file:
             #update the winning candidate
             winningCandidate = candidate
 
-    winningCandidateOutput = f"Winner: {winningCandidate}\n"
+    winningCandidateOutput = f"Winner: {winningCandidate}"
     #Output to terminal 
     output = (  
-    f"Election Results\n\n"
-    f"-------------------------\n\n" 
-    f"Total Votes: {totalVotes}\n\n"
-    f"-------------------------\n\n"
+    f"\nElection Results\n"
+    f"----------------------------\n" 
+    f"Total Votes: {totalVotes}\n"
+    f"----------------------------\n"
     f"{voteOutput}"
-    f"-------------------------\n\n"
+    f"----------------------------\n"
     f"{winningCandidateOutput}\n"
-    f"-------------------------\n\n"
+    f"----------------------------\n"
     )
     print(output)
 

@@ -75,10 +75,10 @@ with open(inputFile, 'r') as file:
 with open(outputFile, 'w') as file:
     
     # use writeRow function to write data to the file
-    file.write(f"Financial Analysis\n\n")
-    file.write(f"---------------------------\n\n")
-    file.write(f"Total Months: {no_of_months}\n\n")
-    file.write(f"Total: ${total_profit_loss}\n\n")
-    file.write(f"Average Change: ${averageMonthlyChanges:.2f}\n\n")
-    file.write(f"Greatest Increase in Profits: {greatestIncrease[0]} (${greatestIncrease[1]})\n\n")
-    file.write(f"Greatest Decrease in Profits: {greatestDecrease[0]} (${greatestDecrease[1]})\n\n")
+    file.write(f"Financial Analysis\n")
+    file.write(f"---------------------------\n")
+    file.write(f"Total Months: {no_of_months}\n")
+    file.write(f"Total: ${total_profit_loss}\n")
+    file.write(f"Average Change: ${averageMonthlyChanges:.2f}\n")
+    file.write(f"Greatest Increase in Profits: {greatestIncrease[0]} (${greatestIncrease[1]})\n")
+    file.write(f"Greatest Decrease in Profits: {greatestDecrease[0]} (${greatestDecrease[1]})\n")

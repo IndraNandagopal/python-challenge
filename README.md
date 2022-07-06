@@ -42,17 +42,11 @@ The Python script analyzed the records to calculate each of the following values
 ### PyBank Output:
 
     Financial Analysis
-
     ---------------------------
-
     Total Months: 86
-
     Total: $22564198
-
     Average Change: $-8311.11
-
     Greatest Increase in Profits: Aug-16 ($1862002)
-
     Greatest Decrease in Profits: Feb-14 ($-1825558)
 
 - The final script prints the analysis to the terminal and exports the results to [pyBank_analysis.txt](PyBank/analysis/pyBank_analysis.txt)
@@ -70,23 +64,14 @@ In this Challenge, the task is to create a Python script to analyze the poll dat
 ### PyPoll Output:
 
     Election Results
-
-    -------------------------
-
+    ----------------------------
     Total Votes: 369711
-
-    -------------------------
-
+    ----------------------------
     Charles Casper Stockham: 23.049% (85213)
-
     Diana DeGette: 73.812% (272892)
-    
     Raymon Anthony Doane: 3.139% (11606)
-    
-    -------------------------
-    
+    ----------------------------
     Winner: Diana DeGette
-    
-    -------------------------
+    ----------------------------
 
 - The final script prints the analysis to the terminal and exports the results to [pyPoll_analysis.txt](PyPoll/analysis/pyPoll_analysis.txt)
